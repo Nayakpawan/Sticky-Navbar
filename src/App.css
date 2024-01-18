@@ -1,0 +1,95 @@
+
+header .navbar {
+    position: absolute;
+    width: 100%;
+    background-color: transparent;
+    z-index: 1000;
+  }
+  
+  header .navbar.sticky {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #f7f7f7;
+    transition: all 15ms ease-in-out;
+    animation-name: stickyTransition;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    box-shadow: 0 2px 3px rgba(96, 96, 96, 0.1);
+  }
+  @keyframes stickyTransition {
+    0% {
+      opacity: 0;
+      transform: translate3d(0, -100%, 0);
+    }
+    100% {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  
+  header .logo img {
+    width: auto;
+    max-width: inherit;
+    max-height: 80px;
+  }
+  header .nav-link {
+    display: inline-flex;
+    justify-content: center;
+    color: #f7f7f7;
+    padding: 0 1rem !important;
+    font-size: 1.125rem;
+    font-weight: 500;
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+    transition: all 15ms ease-in-out;
+  }
+  
+  header .sticky .nav-link {
+    color: #333;
+  }
+  header .nav-link:hover {
+    color: #f7be27;
+  }
+  header .cart {
+    position: relative;
+    top: -0.4375rem;
+  }
+  header .roundpoint {
+    width: 16px;
+    height: 16px;
+    background:#e3000e;
+    border-radius: 50%;
+    color: #f7f7f7;
+    font-size: 11.2px;
+    line-height: 16px;
+    text-align: center;
+    font-style: normal;
+    position: absolute;
+    top: 3.2px;
+    right: -8px;
+  }
+  
+  /* Media Query CSS */
+  
+  @media (max-width: 992px) {
+    header .navbar {
+      background-color: #f7f7f7;
+    }
+    header .navbar-toggler {
+      border: none;
+    }
+    header .navbar-toggler:focus {
+      outline: none;
+      box-shadow: none;
+    }
+    header .navbar-toggler-icon {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+    header .nav-link {
+      color: #333;
+      padding: 1rem !important;
+    }
+  }
+  
